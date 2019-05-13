@@ -5,5 +5,6 @@ user = websocketClient()
 loop = asyncio.get_event_loop()
 connection = loop.run_until_complete(user.connect())
 asyncio.run(user.onConnect())
+loop.run_forever()
 
 

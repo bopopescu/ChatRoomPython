@@ -33,6 +33,7 @@ async def unregister(name):
 
 # initiate contact with
 async def initiate(websocket, path):
+    print("Waiting...")
     name = await websocket.recv()
     print(f"< {name}")
     greeting = f"Hello {name}, please send your message!"
@@ -50,21 +51,21 @@ async def recvMessage():
 async def sendMessage(message):
     for client in connectedClients:
         await client.ws.send(message)
-    await asyncio.wait([client.ws.send(message) for client in connectedClients])
 
 async def listen():
-    while True:
-        message = await recvMessage()
-        await sendMessage(message)
+    print("Listening...")
+    message = await recvMessage()
+    print("Received message")
+    await sendMessage(message)
+    print("Sent message")
 
 start_server = websockets.serve(initiate, 'localhost', 8765)
+
 loop = asyncio.get_event_loop()
 try:
-    asyncio.ensure_future(start_server)
+    loop.run_until_complete(start_server)
     asyncio.ensure_future(listen())
     loop.run_forever()
-except KeyboardInterrupt:
-    pass
 finally:
     print("Closing Loop")
     loop.close()
