@@ -3,7 +3,7 @@ import websockets
 
 class websocketClient():
 
-    connection = 'no conncetion'
+    connection = 'no connection'
     name = 'no name'
 
     def __init__(self):
