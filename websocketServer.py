@@ -12,7 +12,6 @@ async def notify_in(name):
         message = name + ' has joined the chat room.'
         await asyncio.wait([clients.ws.send(message) for clients in connectedClients])
 
-
 # Sends everybody in the group a message when someone leaves the chat
 async def notify_out(name):
     if connectedClients:
@@ -44,38 +43,29 @@ async def initiate(websocket, path):
     # This function does not handle concurrency. Need to fix
 
 async def recvMessage():
-    for websocket in connectedClients:
-        message = await websocket.recv()
+    for client in connectedClients:
+        message = await client.ws.recv()
         return message
 
 async def sendMessage(message):
-    for websocket in connectedClients:
-        await websocket.send(message)
-    # await asyncio.wait([websocket.send(message) for websocket in .connectedClients])
+    for client in connectedClients:
+        await client.ws.send(message)
+    await asyncio.wait([client.ws.send(message) for client in connectedClients])
 
 async def listen():
     while True:
         message = await recvMessage()
         await sendMessage(message)
 
-# class Client(threading.Thread):
-#     def __init__(self, nickname, websocket):
-#         super(Client, self).__init__()
-#         self.nickname = nickname
-#         self.websocket = websocket
-#
-#     async def run(self):
-#         while True:
-#             message = await self.websocket.recv()
-#
-#
-#             message = await recvMessage()
-#             await sendMessage(message)
-
-
 start_server = websockets.serve(initiate, 'localhost', 8765)
-asyncio.get_event_loop().run_until_complete(start_server)
-#asyncio.get_event_loop().run_until_complete(listen())
-print("1")
-asyncio.get_event_loop().run_forever()
+loop = asyncio.get_event_loop()
+try:
+    asyncio.ensure_future(start_server)
+    asyncio.ensure_future(listen())
+    loop.run_forever()
+except KeyboardInterrupt:
+    pass
+finally:
+    print("Closing Loop")
+    loop.close()
 

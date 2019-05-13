@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3298fe0f-2675-4fc5-8fb3-87c0bf728a7d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/websocketClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/websocketClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websocketServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/websocketServer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/websocketServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+            <state relative-caret-position="199">
+              <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/websocketClient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -92,7 +91,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="903" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
     <option name="width" value="935" />
     <option name="height" value="1091" />
   </component>
@@ -101,7 +101,20 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DaHub" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DaHub" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
@@ -124,7 +137,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.clientMain">
+  <component name="RunManager" selected="Python.websocketServer">
     <configuration name="clientMain" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DaHub" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -232,8 +245,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.clientMain" />
         <item itemvalue="Python.websocketServer" />
+        <item itemvalue="Python.clientMain" />
         <item itemvalue="Python.serverMain" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.server" />
@@ -266,12 +279,12 @@
     <frame x="-7" y="-7" width="1233" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.122073576" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122073576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49916387" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49916387" weight="0.3283582" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49916387" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -320,6 +333,9 @@
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/websockets/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/websockets/protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -327,8 +343,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/serverMain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clientMain.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -342,25 +362,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/websocketClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serverMain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/websocketServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        <state relative-caret-position="199">
+          <caret line="66" column="8" lean-forward="true" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
